@@ -1,5 +1,6 @@
 ﻿using MQTTnet;
 using MQTTnet.Client;
+using MQTTnet.Protocol;
 using System.Diagnostics;
 using System.Text;
 
@@ -28,7 +29,10 @@ namespace MqttPlayground
                     .WithClientId("PlaygroundSubscriber")
                     .WithTcpServer("localhost", 1883)
                     .WithCleanSession(true)
-                    .WithKeepAlivePeriod(TimeSpan.FromSeconds(15))
+                    .WithKeepAlivePeriod(TimeSpan.FromSeconds(0))
+                    .WithWillTopic("")
+                    .WithWillPayload("offline")
+                    .WithWillQualityOfServiceLevel(MqttQualityOfServiceLevel.ExactlyOnce)
                     .Build();
 
                     // Specify what to do with message 

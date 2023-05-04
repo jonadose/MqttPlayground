@@ -10,5 +10,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
     <PackageReference Include="MQTTnet" Version="4.2.0.706" />
+    <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="4.2.0.706" />
   </ItemGroup>
 </Project>

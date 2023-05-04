@@ -13,6 +13,7 @@ IHost host = Host.CreateDefaultBuilder(args)
         services.AddSingleton<Stopwatch>();
         services.AddHostedService<MqttPublisher>();
         services.AddHostedService<MqttSubscriber>();
+        services.AddHostedService<MqttManagedClient>();
     })
     .Build();
 
